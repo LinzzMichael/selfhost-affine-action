@@ -11,6 +11,8 @@ inputs:
 runs:
   using: 'composite'
   steps:
+    - name: Give execute permission to set-version.sh
+      run: chmod +x ./scripts/set-version.sh
     - name: 'Write Version'
       shell: bash
       env:
